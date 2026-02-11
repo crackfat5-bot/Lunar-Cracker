@@ -1,0 +1,29 @@
+[package]
+name = "Lunar_Cracked"
+version = "1.0.0"
+edition = "2021"
+
+
+[dependencies]
+eframe = "0.29"
+egui = "0.29"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0.0"
+chrono = "0.4"
+rand = "0.8"
+base64 = "0.22"
+open = "5.0"
+image = "0.25"
+rfd = "0.15"
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+
+[[bin]]
+name = "Lunar_Cracked"
+path = "src/main.rs"
